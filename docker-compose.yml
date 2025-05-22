@@ -42,6 +42,7 @@ services:
       BASIC_AUTH_PASSWORD: ${N8N_BASIC_AUTH_PASSWORD}
 
       # Other settings
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
       GENERIC_TIMEZONE: Asia/Bangkok
       N8N_HOST: ${N8N_HOST}
       N8N_PORT: ${N8N_PORT}
