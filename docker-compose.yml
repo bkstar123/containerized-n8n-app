@@ -23,6 +23,11 @@ services:
     env_file:
       - .env
     environment:
+      # Turn on HTTPS
+      N8N_PROTOCOL: https
+      N8N_SSL_CERT: /home/node/.n8n/certs/n8n_hattek_net_cert.pem
+      N8N_SSL_KEY:  /home/node/.n8n/certs/n8n_hattek_net_key.pem
+
       # Configure n8n app to use MYSQL
       DB_TYPE: mysqldb 
       DB_MYSQLDB_HOST: mysql
@@ -44,6 +49,7 @@ services:
 
     volumes:
       - n8n_data:/home/node/.n8n
+      - ./certs:/home/node/.n8n/certs:ro
     networks:
       - n8n-network
 
