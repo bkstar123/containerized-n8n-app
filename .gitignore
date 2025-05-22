@@ -6,6 +6,9 @@
 # Docker volumes
 volumes/
 
+# certs
+certs/
+
 # Operating System Files
 .DS_Store
 Thumbs.db
