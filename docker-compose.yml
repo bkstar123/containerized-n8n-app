@@ -47,7 +47,6 @@ services:
       GENERIC_TIMEZONE: Asia/Bangkok
       N8N_HOST: ${N8N_HOST}
       N8N_PORT: ${N8N_PORT}
-      WEBHOOK_TUNNEL_URL: https://n8n.hattek.net/
 
     volumes:
       - n8n_data:/home/node/.n8n
