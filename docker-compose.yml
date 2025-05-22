@@ -43,6 +43,7 @@ services:
 
       # Other settings
       N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      N8N_RUNNERS_ENABLED: "true"
       GENERIC_TIMEZONE: Asia/Bangkok
       N8N_HOST: ${N8N_HOST}
       N8N_PORT: ${N8N_PORT}
