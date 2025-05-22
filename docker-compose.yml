@@ -24,7 +24,7 @@ services:
       - .env
     environment:
       # Configure n8n app to use MYSQL
-      DB_TYPE: mysql
+      DB_TYPE: mysqldb 
       DB_MYSQLDB_HOST: mysql
       DB_MYSQLDB_PORT: 3306
       DB_MYSQLDB_DATABASE: ${MYSQL_DATABASE}
