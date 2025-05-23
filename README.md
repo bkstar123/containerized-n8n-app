@@ -69,6 +69,9 @@ if you have a public hostname that you want to assign to your n8n application. Y
     ProxyPreserveHost On
     ProxyRequests    Off
 
+    ProxyPass        "/rest/push"  "ws://127.0.0.1:5678/rest/push"
+    ProxyPassReverse "/rest/push"  "ws://127.0.0.1:5678/rest/push"
+
     ProxyPass        "/"  "http://127.0.0.1:5678/"
     ProxyPassReverse "/"  "http://127.0.0.1:5678/"
 
