@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
   mysql:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - "${N8N_PORT-5678}:5678"
+      - "5678:5678"
     env_file:
       - .env
     environment:
@@ -31,21 +31,15 @@ services:
       DB_MYSQLDB_USER: ${MYSQL_USER}
       DB_MYSQLDB_PASSWORD: ${MYSQL_PASSWORD}
 
-      # Basic authentication
-      BASIC_AUTH_ACTIVE: ${N8N_BASIC_AUTH_ACTIVE}
-      BASIC_AUTH_USER: ${N8N_BASIC_AUTH_USER}
-      BASIC_AUTH_PASSWORD: ${N8N_BASIC_AUTH_PASSWORD}
-
       # Other settings
       N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
       N8N_RUNNERS_ENABLED: "true"
       GENERIC_TIMEZONE: Asia/Bangkok
       N8N_HOST: ${N8N_HOST}
-      N8N_PORT: ${N8N_PORT}
+      N8N_PORT: 5678
 
     volumes:
       - n8n_data:/home/node/.n8n
-      - ./certs:/home/node/.n8n/certs:ro
     networks:
       - n8n-network
 
