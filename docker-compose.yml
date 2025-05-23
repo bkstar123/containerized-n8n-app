@@ -35,7 +35,7 @@ services:
       N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
       N8N_RUNNERS_ENABLED: "true"
       GENERIC_TIMEZONE: Asia/Bangkok
-      N8N_HOST: ${N8N_HOST}
+      N8N_HOST: 127.0.0.1
       N8N_PORT: 5678
 
     volumes:
